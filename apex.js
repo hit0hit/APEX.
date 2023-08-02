@@ -26,3 +26,12 @@ apex.server.process('PAUSE_CRON_TAREFA',{ dataType : 'json',  x01 : id }, { data
 apex_util.set_session_state('GLOBAL_USER_ID', v_id_user);
     apex_util.set_session_state('GLOBAL_USER_PERFIL', v_id_perfil);
     apex_util.set_session_state('GLOBAL_USER_PERFIL', v_id_perfil);
+
+
+
+
+javascript: apex.item('P5_ID').setValue('#ID#');apex.server.process('GET_MODAL_URL', {}, {     dataType:'text',     success:function(pUrl) {         eval(pUrl)     } });
+///// ajax callback
+'GET_MODAL_URL'
+htp.p(APEX_UTIL.PREPARE_URL(p_url => 'f?p=' || :APP_ID || ':6:'|| :APP_SESSION
+||'::NO::P6_ID_CLIENTE:' || ':P5_ID'));
