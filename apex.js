@@ -35,3 +35,8 @@ javascript: apex.item('P5_ID').setValue('#ID#');apex.server.process('GET_MODAL_U
 'GET_MODAL_URL'
 htp.p(APEX_UTIL.PREPARE_URL(p_url => 'f?p=' || :APP_ID || ':6:'|| :APP_SESSION
 ||'::NO::P6_ID_CLIENTE:' || ':P5_ID'));
+
+///////////////////////////////////
+javascript: apex.item('P57_ID_EMPRESA').setValue('&ID_EMPRESA.');apex.item('P57_ID_RESPONSAVEL').setValue('&ID_RESPONSAVEL.');apex.submit('SET_SESSION');
+apex_util.set_session_state('GLOBAL_USER_ID_EMPRESA', :P57_ID_EMPRESA);
+apex_util.set_session_state('GLOBAL_USER_EMPRESA', :P57_ID_RESPONSAVEL);
