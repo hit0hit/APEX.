@@ -7,6 +7,8 @@ apex.page.cancelWarnOnUnsavedChanges();
 apex.navigation.redirect( someUrl );
 apex.navigation.redirect('\u002Fords\u002Ff?p=107 :1::::::');
 
+apex_string.get_initials(USER_NAME) as user_icon,
+
 apex.page.confirm( "Delete Department", 'DELETE' );
 apex.page.confirm( "Save Department?", {
     request: "SAVE",
