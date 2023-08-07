@@ -1,3 +1,9 @@
+apex.message.showPageSuccess("Message sent.");
+apex.region("chat-messages").refresh();
+apex.item("P19_MESSAGE").setValue("");
+apex.item("P19_MESSAGE").enable();
+apex.item("P19_MESSAGE").setFocus();
+
 APEX_PAGE.GET_URL(p_page => 24, p_items  => 'P24_ID_CATEGORIA', p_values => C.id_categoria) as PAGE_URL
 apex_page.get_url(p_page => '5', p_items => 'P5_ID_CLIENTE', p_values => CL.ID_CLIENTE) AS REDIRECT_URL
 apex.item('P1_ID_TAREFA_CRON').setValue(id)
